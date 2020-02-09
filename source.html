@@ -1,443 +1,204 @@
-<html dir="rtl">
-  <head>
-    <title>LoginPage</title>
-    <meta
-      name="vs_targetSchema"
-      content="http://schemas.microsoft.com/intellisense/ie5"
-    />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/_styles/Forms.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="../../_Scripts/jq.js"></script>
-    <script>
-      function menu() {
-        var n = new parent.parent.Commander.NewFaci('0', 11130);
-        n.CloseOpener(true);
-        n.Call();
-      }
-    </script>
-  </head>
-  <body language="javascript" scroll="no" onload="l()">
-    <div id="authTable">
-      <table width="400px" align="center">
-        <tbody>
-          <tr>
-            <td align="middle">
-              <label
-                id="F92001"
-                style="FONT-SIZE: 13px; LINE-HEIGHT: 20px;display:inline"
-                class="txt"
-                >دانشگاه شهيد بهشتي</label
-              >
-            </td>
-          </tr>
-          <tr>
-            <td align="middle">
-              <label
-                id="F92051"
-                style="FONT-SIZE: 18px; LINE-HEIGHT: 30px;display:inline"
-                class="txt"
-                >سيستم جامع دانشگاهي</label
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table align="center" style="TABLE-LAYOUT: fixed" width="400px">
-        <colgroup>
-          <col width="270" />
-          <col width="160" />
-          <col width="200" />
-        </colgroup>
-        <tbody>
-          <tr height="30px"></tr>
-          <tr height="30px">
-            <td align="left">شناسه کاربری:</td>
-            <td>
-              <input
-                id="F80351"
-                autocomplete="off"
-                class="txt"
-                dir="ltr"
-                size="14"
-                nex="F80401"
-                lan="2"
-                style="font-size: 12px; width: 130px; font-family: BTahoma; height: 18px;"
-              />
-            </td>
-            <td></td>
-          </tr>
-          <tr height="30px">
-            <td align="left">گذرواژه:</td>
-            <td>
-              <input
-                id="F80401"
-                autocomplete="off"
-                class="txt"
-                dir="ltr"
-                type="password"
-                size="14"
-                nex="btnLog"
-                lan="2"
-                style="font-size: 12px; width: 130px; font-family: BTahoma; height: 18px;"
-              />
-            </td>
-            <td></td>
-          </tr>
-          <tr style="display:none" height="50px" id="CapRow">
-            <td align="left">لطفا کد مقابل را وارد نماييد:</td>
-            <td>
-              <input
-                dir="ltr"
-                type="text"
-                autocomplete="off"
-                class="txt"
-                style="font-size: 12px; width: 130px; height: 18px; font-family: BTahoma;"
-                id="F51701"
-                lan="2"
-                nex="btnLog"
-              />
-            </td>
-            <td align="right">
-              <img
-                src="captcha.aspx"
-                onclick="this.src=this.src"
-                title="جهت بازسازي کد امنيتي بر روي آن کليک کنيد"
-                border="0"
-                id="imgCaptcha"
-              />
-            </td>
-          </tr>
-          <tr height="15px"></tr>
-          <tr height="30px">
-            <td></td>
-            <td>
-              <img
-                id="btnLog"
-                title="ورود"
-                disabled=""
-                class="c1"
-                by="1200"
-                src="/_Images/nophoto.gif"
-                style="BACKGROUND-POSITION:0px -1200px;WIDTH:50px"
-                onclick="btnLog_onclick(event);"
-              />
-              &nbsp;&nbsp;&nbsp;<img
-                id="btnEx"
-                title="خروج"
-                disabled=""
-                class="c1"
-                by="1300"
-                src="/_Images/nophoto.gif"
-                style="BACKGROUND-POSITION:0px -1300px;WIDTH:50px"
-                onclick="return btnEx_onclick()"
-              />
-            </td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <input
-        class="txt"
-        id="F51851"
-        style="display: none; font-family: BTahoma;"
-        autocomplete="off"
-      />
-      <input
-        class="txt"
-        id="F83181"
-        style="display: none; font-family: BTahoma;"
-        autocomplete="off"
-      />
-      <br />
-      <br />
-      <div style="PADDING-RIGHT: 10px" id="dsetting">
-        <span
-          style="CURSOR:pointer;COLOR:red"
-          onclick="setting.style.display=(setting.style.display=='')?'none':'';"
-        >
-          تنظيمات</span
-        >
+<html dir="rtl"><head>
+  <title>سيستم جامع دانشگاهي - دانشگاه شهيد بهشتي  - منوي كاربر</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+  <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+  <link rel="stylesheet" type="text/css" href="/_styles/Forms.css">
+  <link rel="stylesheet" type="text/css" href="/_styles/main.css">
+  <link rel="Stylesheet" type="text/css" href="/_styles/jqui/themes/np/ui.css">        
+  <link rel="Stylesheet" type="text/css" href="/_styles/npui.css">
+  <script type="text/javascript" src="/univ/stdno.js"></script>
+  <script type="text/javascript" src="/_Scripts/faci.js"></script>
+  <script src="/_scripts/jq.js" type="text/javascript"></script>
+  <script src="/_scripts/jqui.js" type="text/javascript"></script>
+  <script src="/_Scripts/npnfwinwidget.js" type="text/javascript"></script>
+  <script src="/_Scripts/jqnpviewer.js" type="text/javascript"></script>
+  <!--
+  <SCRIPT src="/_Scripts/jqui.date.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="/_Scripts/jqui.date.calender.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="/_Scripts/jqui.date-fa.js" type="text/javascript"></SCRIPT>
+  -->
+  <script type="text/javascript">
 
-        |
-        <label
-          style="CURSOR: hand; COLOR: red; "
-          onclick="g('BF4DE8DEJ4      ',event)"
-          >بازيابي كلمه عبور اساتيد</label
-        >
-        |
-        <label
-          style="CURSOR: hand; COLOR: red; "
-          onclick="g('77017418RE      ',event)"
-          >بازيابي كلمه عبور دانشجويان</label
-        >
-        |
-        <label
-          style="CURSOR: hand; COLOR: red; "
-          onclick="g('A765A2E6H3      ',event)"
-          >بازيابي كلمه عبور داوطلب آزمون</label
-        >
-      </div>
-      <table
-        cellspacing="10"
-        id="setting"
-        style="BORDER-RIGHT: thin outset; BORDER-TOP: thin outset; DISPLAY: none; RIGHT: 5px; BORDER-LEFT: thin outset; COLOR: black; BORDER-BOTTOM: thin outset; POSITION: relative; TOP: 1px; BACKGROUND-COLOR: #f9f8f4"
-      >
-        <tbody>
-          <tr>
-            <td>
-              <input
-                align="bottom"
-                type="checkbox"
-                id="DisbOthrs"
-                onclick="if(this.checked)F51601.value=1; else F51601.value=0; F51601.UpdateSndData()"
-              />
-              <input
-                id="F51601"
-                type="text"
-                class="txt"
-                style="display: none; font-family: BTahoma;"
-                autocomplete="off"
-              />
-            </td>
-            <td>غير فعال كردن صفحات ديگر</td>
-          </tr>
-        </tbody>
-      </table>
-      <input
-        id="F51602"
-        class="txt"
-        style="display: none; font-family: BTahoma;"
-        autocomplete="off"
-        disabled=""
-      />
-      <input
-        id="F51803"
-        class="txt"
-        style="display: none; font-family: BTahoma;"
-        autocomplete="off"
-        disabled=""
-      />
-    </div>
-
-    <script language="javascript" id="clientEventHandlersJS">
-      var pu;
-      if (window.ActiveXObject) {
-        pu = new ActiveXObject('Msxml2.DOMDocument');
-        var puXSL = new ActiveXObject('Msxml2.FreeThreadedDOMDocument');
-        puXSL.async = false;
-        puXSL.load('pu.xslt');
-      } else {
-        pu = new XMLHttpRequest();
-        var puXSL = new XMLHttpRequest(); //= loadXML();
-        puXSL.open('GET', 'pu.xslt', true);
-        puXSL.send('');
-      }
-      var ReadyForLogin = false;
-      if (window.ActiveXObject) {
-        var XmlSnd = new ActiveXObject('Microsoft.XMLDOM');
-      } else {
-        var XmlSnd = $.parseXML('<r/>');
-        var s_MB = new XMLSerializer();
-        var d_MB = XmlSnd.documentElement;
-        XmlSnd.xml = s_MB.serializeToString(d_MB);
-
-        $.fn.UpdateSndData = function() {
-          var element = this[0];
-          XmlSnd.documentElement.setAttribute(element.id, $(element).val());
-          var s = new XMLSerializer();
-          var d = XmlSnd.documentElement;
-          XmlSnd.xml = s.serializeToString(d);
-          // RefreshRadio(); RefreshCbox();
-        };
-      }
-      var FrmFields = new Array(
-        F80351,
-        F80401,
-        F92001,
-        F92051,
-        F51602,
-        F51803,
-        F51851,
-        F83181,
-        F51701
-      );
-      var ACT09 = new Array(F80351, F80401, F51851, F83181, F51701);
-      if (window.ActiveXObject) {
-        XmlSnd.loadXML('<r/>');
-      }
-
-      ver = 3;
-      function btnLog_onclick(event) {
-        var d, t, l;
-        var event = event || window.event;
-        var srcElement = event.srcElement || event.currentTarget;
-        var f = top.t.FaciArr[parent.parent.ContInd],
-          tab = f.par;
-        tab.usrcertreq = false;
-        if (F80351.value == '' || F80401.value == '') {
-          alert('شناسه کاربری يا گذرواژه اشتباه است. ');
-          F80351.SetFocus();
-          return;
-        }
-        srcElement.disabled = true;
-        parent.parent.Commander.act_data_frm('09');
-        //F80351.SetFocus(true);
-      }
-      function l() {
-        try {
-          if (window.parent.parent.Data.document.readyState != 'complete') {
-            window.setTimeout('l();', 500);
-            return;
+          var t, mt, titH = 48, CSURL = "";
+          /*function trim(s){
+             try{
+                return s.replace(/^\s+|\s+$/g,"");
+             }catch(e){return ''};
           }
-        } catch (e) {
-          window.setTimeout('l();', 500);
-          return;
-        } finally {
-          F80351.disabled = false;
-          F80401.disabled = false;
-          if (window.ActiveXObject) F80351.SetFocus(true);
-          btnLog.disabled = false;
-          btnEx.disabled = false;
-          if (window.ActiveXObject)
-            pu.load('../f0242_process_authpubuser/pubuser.aspx');
-          else {
-            pu.open('GET', '../f0242_process_authpubuser/pubuser.aspx', true);
-            pu.send(null);
+          var u_0='',su_0='',ft_0='',f_0='',ltck_0='',tck_0='',seq_0='',sess_0='';
+          var cook=document.cookie.split(";");
+          for (var i=0;i<cook.length;i++){
+             var n=cook[i].split("=");
+             if      (trim(n[0])=='u'   )  u_0     = trim(n[1]) ;
+             else if(trim(n[0])=='su')  su_0    = trim(n[1]) ;
+             else if(trim(n[0])=='ft')  ft_0    = trim(n[1]) ;
+             else if(trim(n[0])=='f'   )  f_0     = trim(n[1]) ;
+             else if(trim(n[0])=='lt')  ltck_0  = trim(n[1]) ;
+             else if(trim(n[0])=='seq') seq_0   = trim(n[1]) ;
+          }*/
+          function l() {
+                 // try{
+                  //    service.useService("../f0241_process_authexit/authexit.asmx?WSDL", "get");
+                 // } catch (e) {
+                      $.get("../f0241_process_authexit/authexit.asmx?WSDL", function (data, status) {
+                          //alert("Status: " + status);
+                      });
+                     /* service = $(service);
+                      var param = { szService: "../f0241_process_authexit/authexit.asmx?WSDL", userName: "get" };
+                      service.useService(param);*/
+                  //}
+//            service.useService("authuser.asmx?WSDL", "get");
+                      mt = new MainTit(document,titH);
+                      mt.Maxi();
+                      t = new Tab(document,titH,0,document.body.clientWidth,document.body.clientHeight-titH);
+                      t.maintitle = mt;
+                      if (location.search.indexOf('fid=') >= 0) {
+                          OpenFaci('...', 'nav.htm' + location.search);
+                      }
+                      else {
+                          OpenFaci('صفحه اصلي', 'nav.htm?fid=0;1&tck=' + '&' + location.search.replace('?', ''));
+                      }
+                      mt.HideGTit();
+                      KeysValues = location.search.split(/&+/);
+          for (i = 0; i < KeysValues.length; i++) {
+                  KeyValue = KeysValues[i].split("=");
+                  if (KeyValue[0] == "CSURL") {
+                      CSURL = KeyValue[1];
+                      break;
+                  }
           }
-
-          pu.onreadystatechange = function() {
-            if (pu.readyState == 4) {
-              if (
-                pu.parseError == 0 ||
-                (!window.ActiveXObject && pu.status == 200)
-              ) {
-                if (window.ActiveXObject) {
-                  var xslt = new ActiveXObject('Msxml2.XSLTemplate');
-                  xslt.stylesheet = puXSL;
-                  var xslProc = xslt.createProcessor();
-                  xslProc.input = pu;
-                  xslProc.transform();
-                  dsetting.innerHTML += xslProc.output;
-                } else {
-                  var xmlDoc;
-                  var xslDoc;
-                  var xslTemplate;
-                  var xslProcessor;
-                  var xslFragment;
-                  xmlDoc = new DOMParser().parseFromString(
-                    pu.response,
-                    'text/xml'
-                  );
-                  xslDoc = new DOMParser().parseFromString(
-                    puXSL.response,
-                    'text/xml'
-                  );
-                  xslProcessor = new XSLTProcessor();
-                  xslProcessor.importStylesheet(xslDoc);
-                  xslFragment = xslProcessor.transformToFragment(
-                    xmlDoc,
-                    document
-                  );
-                  if (pu.response != '') dsetting.appendChild(xslFragment);
-                }
-                /*                                              var c=pu.documentElement.childNodes;
-                                        for(var i=0;i<c.length;i++){
-                                                dsetting.innerHTML+='&nbsp;|&nbsp;<span style="CURSOR: hand; COLOR: red; " onclick="g(\''+c[i].attributes.getNamedItem("L").value+'\')">'+c[i].attributes.getNamedItem("N").value+'</span>';
-                                        }*/
-              } else {
-                //dsetting.innerHTML+='&nbsp;|&nbsp;<span style="CURSOR: hand; COLOR: red; " onclick="g(\'FEFAEE0087C6\')">متقاضي شركت در آزمون</span>';
               }
-            }
-          };
-          /*puh.onreadystatechange = function() {
-            if (puh.readyState == 4) {
-                if (puh.status == 200) {
-                    dsetting.innerHTML += puh.responseText;
-                }
-            }
-        };
-        puh.open("GET", "GetPU.aspx", true);
-        puh.send(null);*/
-        }
-        window.parent.parent.Commander.Form_BodyLoad();
-      }
+              function OpenFaci(name,url){
+       /*document.cookie='u='+u_0      +"; path=/";
+       document.cookie='su='+su_0      +"; path=/";
+       document.cookie='ft='+ft_0     +"; path=/";
+       document.cookie='f='+f_0      +"; path=/";
+       document.cookie='lt='+ltck_0   +"; path=/";
+       document.cookie='seq='+seq_0   +"; path=/";
+       */
+                      mt.ShowGTit();
+                      t.AddNew(name,url);
+                      t.Activate();
+              }
+              function ex(ltck, tck, u, si, ft, fid, sess) {
 
-      function btnEx_onclick() {
-        window.parent.parent.parent.close();
-      }
+               //   try {
+                     // var co = service.createCallOptions();
+                     // co.funcName = "ex";
+                    //  co.async = false;
+                      //service.get.callService(function(result){if(result.error){/*alert(result.errorDetail.string);*/}},"ex",ltck,tck,u,si,ft,fid,sess);
+                  //    service.get.callService(co,ltck,tck,u,si,ft,fid,sess);
+               //   } catch (e) {
+                     // var co = { "ltck": ltck, "tck": tck, "u": u, "si": si, "ft": ft, "f": fid, "SessionID": sess };
+                     /* $.post("../f0241_process_authexit/authexit.asmx",co, function (data, status) {
+                          alert("Data: " + data + "\nStatus: " + status);
+                      });
+              */
+                      var xmlhttp = new XMLHttpRequest();
+                      xmlhttp.open('POST', "../f0241_process_authexit/authexit.asmx", true);      
+                      var sr = '<?xml version="1.0" encoding="utf-8"?>' +
+                      '<SOAP-ENV:Envelope xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:GolestanSystem" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">' +
+                      '<SOAP-ENV:Body>' +
+                      '<ex xmlns="urn:GolestanSystem">' +
+                      '<ltck>' + ltck + '</ltck>' +
+                      '<tck>' + tck + '</tck>' +
+                      '<u>' + u + '</u>' +
+                      '<si>' + si + '</si>' +
+                      '<ft>' + ft + '</ft>' +
+                      '<f>' + fid + '</f>' +
+                      '<SessionID></SessionID></ex></SOAP-ENV:Body>' +
+                      '</SOAP-ENV:Envelope>';
+                      xmlhttp.setRequestHeader('Content-Type', 'text/xml');
+                      xmlhttp.send(sr);
+                //  }
+              }
+              function ul(){
+                      /*var u='',ltck='',tck='',seq='',sess='';
+                      var cook=document.cookie.split(";");
+                      for (var i=0;i<cook.length;i++){
+                              var n=cook[i].split("=");
+                              if         (trim(n[0])=='u'     )  u     = trim(n[1]) ;
+                              else if(trim(n[0])=='su')  su    = trim(n[1]) ;
+                              else if(trim(n[0])=='ft')  ft    = trim(n[1]) ;
+                              else if(trim(n[0])=='f' )  f     = trim(n[1]) ;
+                              else if(trim(n[0])=='lt')  ltck  = trim(n[1]) ;
+                              else if(trim(n[0])=='seq') seq   = trim(n[1]) ;
+                      }*/
 
-      function Get_Data() {
-        Fr_Data = parent.parent.Data;
-        FD = Fr_Data.DataModi;
-        var act = FD.Fm_Action.value;
-        if (act == '00') {
-          document.getElementById('authTable').style.display = '';
-          /* if (!window.ActiveXObject) {
-      document.getElementById('authTable').style.marginTop = "48px";
-      }*/
-        }
-        var ErLen = 0;
-        switch (act) {
-          case '08': {
-            dodec();
-            parent.parent.Commander.act_data_frm('09');
-            break;
-          }
-          case '09': {
-            /* if((F83181.value == 2) && (runLog2 == false) && FD.Fm_Action.value == '09'){
-            var f=top.t.FaciArr[parent.parent.ContInd],tab=f.par;
-                    tab.usrcertreq = true;
-                    setTimeout('btnLog2_onclick();',100);
+          var fac = t.FaciArr[0], a = fac.auth;
+
+          ex(a.ltck, a.tck, a.u, a.seq, 0, 1, a.sess);
+              }
+              function bu(event) {
+        try{
+            if (top.opener) {
+                var ContInd = '',
+                arr = window.location.search.split('&');
+                for (var i = 0; i < arr.length; i++) {
+                    var arri = arr[i].split('=');
+                    if (arri[0] == 'TabId') {
+                        ContInd = arri[1];
+                    }
                 }
+                var f = parent.parent.t.FaciArr[ContInd] ? parent.parent.t.FaciArr[ContInd] : parent.parent.t.FaciArr[0];
+                var auth = f.par.faci.auth;
+                //top.FaciObj.SetAut(GetContInd(),auth);
+                top.FaciObj.SetAut(ContInd, {
+                    u: auth.u,
+                    su: auth.su,
+                    ft: auth.ft,
+                    f: auth.f,
+                    ltck: auth.ltck,
+                    lt: auth.ltck,
+                    tck: auth.tck,
+                    seq: auth.seq,
+                    sess: '',
+                    //sid:'',
+                    actsign: auth.actsign,
+                    ut: ''
+                })
+                top.opener.FaciObj.ReturnOpener(ContInd);
+                return true // false or true are no different !
+            }
+            /*if(top.opener)
+               return true;
             */
-            /*if (Fr_Data.ErrorArr.length == 0 && top.Login_header_logo)
-            top.Hide_Login_header_logo();*/
-            break;
-          }
         }
-        try {
-          if (!Fr_Data.ErrorArr) {
-            ErLen = Fr_Data.ErrorDSC.length;
-          } else {
-            ErLen = Fr_Data.ErrorDSC.length + Fr_Data.ErrorArr.length;
-          }
-        } catch (e) {
-          ErLen = 1;
+        catch(e){
+
         }
-        if (ErLen > 0) {
-          if (CapRow.style.display == '') parent.parent.Message.ShowCap();
-          parent.parent.Commander.ShowStatus('Error');
-          F80351.disabled = false;
-          F80401.disabled = false;
-          //F80351.SetFocus();
-          btnLog.disabled = false;
-          btnEx.disabled = false;
-        } else {
-          parent.parent.Commander.ShowStatus('OK');
-        }
-        parent.parent.Message.HideMsg();
-        if (act == '00' && ErLen == 0) {
-          ReadyForLogin = true;
-        }
-      }
-      function g(l, event) {
         var event = event || window.event;
-        var srcElement = event.srcElement || event.currentTarget;
-        if (srcElement.disabled) return;
-        F80351.value = l;
-        F80401.value = l;
-        if (!window.ActiveXObject) {
-          F80351 = $('#F80351');
-          F80401 = $('#F80401');
-        }
-        F80351.UpdateSndData();
-        F80401.UpdateSndData();
-        btnLog_onclick(event);
-      }
-      function IsReadyForLogin() {
-        return ReadyForLogin;
-      }
-      //-->
-    </script>
-  </body>
-</html>
+                      if(t.exalert)event.returnValue = 'آيا مايليد از سيستم جامع دانشگاهي گلستان خارج شويد؟';
+              }
+              function onr(){
+                  try{
+                      mt.SetPos();
+                      t.SetDim(titH,0,document.body.clientWidth,document.body.clientHeight-titH); 
+                      t.SetPos(t.butt_vis);
+                      t.faci.SetPos();
+                  }
+                  catch(e){}
+              }
+              function closeall(){
+                      ul();
+                      t.exalert=false;
+                      if (CSURL != ""){
+                          top.location=CSURL.replace('$','=');
+                      }
+                      else{
+                          top.location="/";
+                      }
+              }
+
+              function showpic(options){
+                  var $npv = $('<div/>').npviewer(options);
+              }
+  </script>
+</head>
+<body onload="l()" onunload="ul()" onbeforeunload="bu(event)" onresize="onr()">
+  <div id="service" style="display:none"></div>
+
+
+<div id="_mt_bou" style="position: absolute; visibility: visible; z-index: 1000; font-size: 9px; top: 0px; left: 0px; width: 1920px; height: 48px;"><div id="_mt_god" align="center" style="position: absolute; visibility: visible; z-index: 1000; font-size: 9px; top: 0px; right: 0px; width: 1920px;">به نام خدا</div><div id="_mt_gt" align="center" style="position: absolute; visibility: visible; z-index: 1000; font-size: 12px; color: rgb(65, 27, 24); top: 14px; left: 0px; width: 1920px;">سيستم جامع دانشگاهي&nbsp;&nbsp;&nbsp;دانشگاه شهيد بهشتي<br><span style="COLOR:#aa0000"></span></div><div id="_mt_arm" style="position: absolute; visibility: visible; z-index: 1000; font-size: 9px; top: 0px; left: 0px;"><img src="/_templates/unvarm/unvarm.aspx?typ=1"></div><div id="_mt_usr" style="position: absolute; visibility: visible; z-index: 1000; font-size: 9px; right: 6px; bottom: 0px;">کاربر : محمد چگيني&nbsp;&nbsp;&nbsp;<span style="cursor:hand;color:blue" onclick="closeall();">خروج</span></div><div style="visibility: visible; position: absolute; left: 80px; bottom: 0px;">16:09:54&nbsp;يكشنبه&nbsp;20&nbsp;بهمن&nbsp;1398&nbsp;</div><div id="_mt_tim" style="position: absolute; visibility: hidden; 
+z-index: 1000; font-size: 9px;"></div><div style="position: absolute; visibility: hidden; z-index: 1000; font-size: 9px;"></div></div><div id="ButtArea" style="position: absolute; overflow: hidden; top: 49px; right: 20px; width: 1818px; height: 5px;"><div class="tabbutt r2" style="position: absolute; overflow: hidden; visibility: hidden; right: 1px;"><img class="c1" title="close" src="/_Images/nophoto.gif" style="width: 10px; height: 13px; background-position: 0px -2250px;"></div><div id="TabButtNam" class="tabbutt m2" title="منوي كاربر" style="position: absolute; overflow: hidden; visibility: hidden; right: 17px;"><div style="width:49px">منوي كاربر</div></div><div class="tabbutt l2" style="position: absolute; width: 4px; visibility: hidden; right: 72px;"></div></div><div id="FacArea" style="top: 48px; position: absolute; overflow: hidden; width: 1920px; height: 877px;"><div style="overflow: auto; position: absolute; z-index: 3; width: 1920px; height: 877px;"><iframe src="/forms/f0240_process_authnav/nav.htm?r=0.19043527769876634&amp;fid=0;11130&amp;b=&amp;l=&amp;tck=991B27E3-8B1C-4D" id="Faci2" name="Faci2" width="1920" height="877" style="z-index: 3;"></iframe></div></div><div id="ExArea" style="position: absolute; overflow: hidden; visibility: hidden; top: 53px; width: 20px; height: 23px;"><img class="c1" title="تمام صفحه" src="/_Images/nophoto.gif" style="width: 18px; height: 18px; background-position: 0px -3300px;"></div><div style="position: absolute; display: none; top: 49px; right: 20px; width: 8px; height: 23px;"><input src="/_Images/sm/scrright.gif" type="image"></div><div style="position: absolute; display: none; top: 49px; left: 82px; width: 8px; height: 23px;"><input src="/_Images/sm/scrleft.gif" type="image"></div></body></html>
